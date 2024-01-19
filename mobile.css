@@ -10,24 +10,21 @@
 }
 
 *{
-    padding: 0;
+   padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
-    text-decoration: none;
-    outline: none;
+    text-decoration: none; 
 }
 
 body{
-    padding: 0 3rem;
+    max-width: 700px;
+    padding: 2rem;
     width: 100%;
+    background-color: var(--offwhite);
 }
 
-.menu{
-    display: none;
-}
-
-header{
+.header{
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -37,36 +34,20 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 2.5rem;
 }
 
 nav ul{
+    display: none;
+}
+
+.up{
     display: flex;
-    align-items: center;
-}
-
-nav ul a{
-    color: var(--darkgrayishblue);
-    margin: 0 2rem;
-    display: block;
-    cursor: pointer;
-}
-
-nav ul a:hover{
-    color: var(--softred);
-}
-
-.container-up{
-    padding: 2rem 0;
-    display: flex;
-}
-
-.left-side{
-    width: 60%;
+    flex-direction: column;
+    padding: 1.5rem 0;
 }
 
 .image{
-    width: 90%;
+    width: 100%;
 }
 
 .image img{
@@ -74,35 +55,30 @@ nav ul a:hover{
 }
 
 .left-text{
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr 1fr;
     padding: 1rem 0;
 }
 
 .left-text h1{
+    font-weight: 800;
     color: var(--verydarkblue);
-    font-size: 3rem;
-}
-
-.items{
-    width: 280px;
+    font-size: 3.2rem;
 }
 
 .items p{
     color: var(--verydarkblue);
-    font-size: .8rem;
-    line-height: 1.5;
-    padding: 0 0 2rem 0;
+    padding: 1rem 0;
+    line-height: 1.3;
+    font-size: 1.05rem;
 }
 
 .btn{
     width: 150px;
     border: none;
     background-color: var(--softred);
-    color: white;
     padding: .5rem 1rem;
+    color: white;
     border-radius: .2rem;
+    cursor: pointer;
     letter-spacing: 2px;
 }
 
@@ -110,22 +86,21 @@ nav ul a:hover{
     background-color: var(--verydarkblue);
 }
 
-.right-side{
-    width: 40%;
+.right{
+    padding: 2rem 0;
 }
 
-.right-container{
+.container-right{
     background-color: var(--verydarkblue);
     color: white;
-    height: 430px;
-    padding: 0 2rem;
+    padding: 2rem 1rem;
 }
 
-.right-container h2{
-    padding: 2rem 0;
+.container-right h1{
+    padding: 1rem 0;
     color: var(--softorange);
-    font-size: 2rem;
-    font-weight: 500;
+    font-size: 3rem;
+    font-weight: 600;
 }
 
 .card{
@@ -133,8 +108,8 @@ nav ul a:hover{
 }
 
 .card a{
-    color: white;
     font-weight: 700;
+    color: white;
 }
 
 .card a:hover{
@@ -144,48 +119,43 @@ nav ul a:hover{
 .card p{
     color: var(--grayishblue);
     padding: 1rem 0;
+    font-size: 1.1rem;
 }
 
 .border{
-    border-bottom: 1px solid hsl(36, 100%, 99%, 0.5);
-}
-
-.down-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
-    padding: 2rem 0;
+    border-bottom: 1px solid  hsl(36, 100%, 99%, 0.5);
 }
 
 .news{
     display: flex;
-    gap: 1rem;
+    margin-bottom: 2rem;
 }
 
-.img{
+.img-news{
     width: 50%;
 }
 
-.img img{
-    width: 100%;
+.img-news img{
+    width: 120px;
 }
+
 
 .text{
     display: flex;
     flex-direction: column;
+    margin-left: 1.5rem;
 }
 
 .text span{
     color: var(--grayishblue);
     font-weight: 700;
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 
 .text a{
     color: var(--verydarkblue);
     font-weight: 700;
-    padding: .5rem 0;
+    padding: 1rem 0;
 }
 
 .text a:hover{
@@ -194,41 +164,53 @@ nav ul a:hover{
 
 .text p{
     color: var(--darkgrayishblue);
+    width: 230px;
 }
-/*
-@media (max-width: 700px){
+
+footer{
+    text-align: center;
+    color: var(--verydarkblue);
+}
+
+footer a{
+    color: var(--darkgrayishblue);
+}
+
+footer a:hover{
+    font-weight: 800;
+}
+
+@media (min-width: 800px){
     body{
-        padding: 2rem 1rem;
+        max-width: 1440px;
+    }
+    .menu{
+        display: none;
     }
 
     nav{
         display: flex;
+        align-items: center;
         justify-content: space-between;
-        align-items: center;
     }
 
-    ul{
-        display: none;
-    }
-
-    .left-side{
+    nav ul{
         display: flex;
-        flex-direction: column;
         align-items: center;
-        margin: 1rem 0;
     }
 
-    .image{
-        width: 100%;
+    nav ul a{
+        color: var(--darkgrayishblue);
+        margin: 0 2rem;
+        display: block;
+        cursor: pointer;
     }
 
-    .image .img-mobile{
-        width: 100%;
+    nav ul a:hover{
+        color: var(--softred);
     }
 
-    .img-desktop{
-        display: none;
+    .container-up{
+        display: flex;
     }
-
-    
 }
