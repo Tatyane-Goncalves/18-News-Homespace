@@ -8,6 +8,9 @@ Obrigada por conferir meu resultado do desafio News Homespace do Frontend Mentor
 
 - URL do site ativo: [News Homespace]()
 
+![Uploading image.png…]()
+
+
 ### Autor
 - Mentor de Frontend - [@Tatyane-Goncalves](https://www.frontendmentor.io/profile/Tatyane-Goncalves)
 - LinkedIn - [@tatyanegoncalves](https://www.linkedin.com/in/tatyanegoncalves/)
